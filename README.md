@@ -14,15 +14,16 @@ This project is a landing page for the "Money Mafia" book launch, built using Re
    npm create vite@latest money-mafia-landing-page --template react-ts
    ```
 
-2. ** move do the directory
+2. ** move to the directory: **
 ```bash
 cd money-mafia-landing-page
 ```
 
+3. **install the dependencies**
 ```bash
 npm install
 ```
-
+4. **run project locally **
 ```bash
 npm run dev
 ```
