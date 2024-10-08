@@ -10,9 +10,9 @@ This project is a landing page for the "Money Mafia" book launch, built using Re
 
    Open your terminal and run:
 
-   ```bash
+```bash
    npm create vite@latest money-mafia-landing-page --template react-ts
-   ```
+```
 
 2. **move to the directory:**
 ```bash
