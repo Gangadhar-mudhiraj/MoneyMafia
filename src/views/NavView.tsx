@@ -10,7 +10,7 @@ const NavView: React.FC = () => {
                         <div className="ms-3 h-8 w-8 bg-white rounded-lg flex items-center justify-center">
                             <FaBook className="text-orange-900 text-2xl" />
                         </div>
-                        <span className="ml-2">Money Mafia</span>
+                        <span className="ml-2">Money Mania</span>
                     </div>
                     <ul className="flex space-x-4 px-7 my-auto">
                         <li>
