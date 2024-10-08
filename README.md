@@ -1,29 +1,33 @@
 # React + TypeScript + Vite + Tailwind
 
-# Money Mafia Book Launch Landing Page
+## Money Mafia Book Launch Landing Page
 
-This project is a landing page for the "Money Mafia" book launch, built using React, TypeScript, Vite, and Tailwind CSS. It provides a modern and responsive design to effectively showcase the book and engage potential readers.
+This project is a landing page for the **"Money Mafia"** book launch, built using **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. It provides a modern and responsive design to effectively showcase the book and engage potential readers.
 
 ## Project Setup
 
-1. **Create a new Vite project with React and TypeScript:**
+1. **Fork the repository:**
+
+   Visit the repository on GitHub and click the **Fork** button in the top right corner to create your own copy of the project.
+
+2. **Clone your forked repository:**
 
    Open your terminal and run:
 
 ```bash
-   npm create vite@latest money-mafia-landing-page --template react-ts
+   git clone https://github.com/YOUR_USERNAME/money-mafia-landing-page.git
 ```
 
-2. **move to the directory:**
+3. **move to the directory:**
 ```bash
    cd money-mafia-landing-page
 ```
 
-3. **install the dependencies**
+4. **install the dependencies**
 ```bash
    npm install
 ```
-4. **run project locally **
+5. **run project locally **
 ```bash
    npm run dev
 ```
