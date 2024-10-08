@@ -14,23 +14,15 @@ This project is a landing page for the "Money Mafia" book launch, built using Re
    npm create vite@latest money-mafia-landing-page --template react-ts
    ```
 
+2. ** move do the directory
 ```bash
-# React + TypeScript + Vite + Tailwind
-```
-```bash
-# Money Mafia Book Launch Landing Page
+cd money-mafia-landing-page
 ```
 
 ```bash
-This project is a landing page for the "Money Mafia" book launch, built using React, TypeScript, Vite, and Tailwind CSS. It provides a modern and responsive design to effectively showcase the book and engage potential readers.
+npm install
 ```
-## Project Setup
 
-
-1. **Create a new Vite project with React and TypeScript:**
-
-   Open your terminal and run:
-
-   ```bash
-   npm create vite@latest money-mafia-landing-page --template react-ts
-   ```
+```bash
+npm run dev
+```
