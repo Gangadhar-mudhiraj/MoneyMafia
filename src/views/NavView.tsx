@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { FaBook, FaBars, FaTimes } from 'react-icons/fa';
 
 const NavView: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu
+    const [isOpen, setIsOpen] = useState(false); 
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen); // Toggle menu visibility
+        setIsOpen(!isOpen); 
     };
 
     return (
@@ -18,7 +18,7 @@ const NavView: React.FC = () => {
                     <span className="ml-2 text-lg font-extrabold text-white">Money Mania</span>
                 </div>
 
-                {/* Hamburger icon for mobile only */}
+              
                 <div className="block md:hidden" onClick={toggleMenu}>
                     {isOpen ? <FaTimes className="text-white text-2xl" /> : <FaBars className="text-white text-2xl" />}
                 </div>
@@ -26,7 +26,7 @@ const NavView: React.FC = () => {
                 <ul
                     className={`flex-col md:flex-row md:flex md:space-x-4 absolute md:static bg-gray-800 md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'flex' : 'hidden'
                         } md:flex`}
-                    style={{ top: '60px' }} // Adjust this value as needed
+                    style={{ top: '60px' }} 
                 >
                     <li className="my-2 md:my-0">
                         <a
