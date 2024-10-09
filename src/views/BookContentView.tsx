@@ -3,9 +3,6 @@ import React from 'react';
 const BookContentView: React.FC = () => {
     return (
         <>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center py-4 sm:py-6 text-gray-200 underline">
-                What's in the book
-            </h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 py-6 md:px-8">
                 <div className="col1 space-y-6">
                     <div className="col bg-gray-100 p-4 rounded-lg shadow-md">

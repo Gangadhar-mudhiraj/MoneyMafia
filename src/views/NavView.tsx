@@ -1,40 +1,74 @@
-import React from 'react';
-import { FaBook } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaBook, FaBars, FaTimes } from 'react-icons/fa';
 
 const NavView: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen); // Toggle menu visibility
+    };
+
     return (
         <header className="sticky top-0 z-10">
-            <nav className="w-11/12 p-3 mx-auto flex justify-between rounded-b-full bg-gray-800 text-gray-100 shadow-lg">
-                <div className="flex justify-between w-full rounded-b-xl">
-                    <div className="w-1/3 px-3 text-center rounded-r-xl rounded-tl-xl text-lg text-white font-extrabold flex items-center">
-                        <div className="ms-3 h-8 w-8 bg-white rounded-lg flex items-center justify-center">
-                            <FaBook className="text-orange-900 text-2xl" />
-                        </div>
-                        <span className="ml-2">Money Mania</span>
+            <nav className="w-11/12 py-3 px-5 mx-auto flex justify-between items-center rounded-b-full bg-gray-800 text-gray-100 shadow-lg">
+                <div className="flex items-center">
+                    <div className="h-8 w-8 bg-white rounded-lg flex items-center justify-center">
+                        <FaBook className="text-orange-900 text-2xl" />
                     </div>
-                    <ul className="flex space-x-4 px-7 my-auto">
-                        <li>
-                            <a href="#home" className="text-center text-white text-lg hover:bg-orange-600 hover:text-white p-2 rounded-r-xl rounded-tl-xl font-bold">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Bookcontent" className="text-center text-white text-lg hover:bg-orange-600 hover:text-white p-2 rounded-r-xl rounded-tl-xl font-bold">
-                                Book Content
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Author" className="text-center text-white text-lg hover:bg-orange-600 hover:text-white p-2 rounded-r-xl rounded-tl-xl font-bold">
-                                Author
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Feedback" className="text-center text-white text-lg hover:bg-orange-600 hover:text-white p-2 rounded-r-xl rounded-tl-xl font-bold">
-                                Feedback
-                            </a>
-                        </li>
-                    </ul>
+                    <span className="ml-2 text-lg font-extrabold text-white">Money Mania</span>
                 </div>
+
+                {/* Hamburger icon for mobile only */}
+                <div className="block md:hidden" onClick={toggleMenu}>
+                    {isOpen ? <FaTimes className="text-white text-2xl" /> : <FaBars className="text-white text-2xl" />}
+                </div>
+
+                <ul
+                    className={`flex-col md:flex-row md:flex md:space-x-4 absolute md:static bg-gray-800 md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'flex' : 'hidden'
+                        } md:flex`}
+                    style={{ top: '60px' }} // Adjust this value as needed
+                >
+                    <li className="my-2 md:my-0">
+                        <a
+                            href="#home"
+                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li className="my-2 md:my-0">
+                        <a
+                            href="#Bookcontent"
+                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
+                        >
+                            Book Content
+                        </a>
+                    </li>
+                    <li className="my-2 md:my-0">
+                        <a
+                            href="#Author"
+                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
+                        >
+                            Author
+                        </a>
+                    </li>
+                    <li className="my-2 md:my-0">
+                        <a
+                            href="#Feedback"
+                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
+                        >
+                            Feedback & FAQ
+                        </a>
+                    </li>
+                    <li className="my-2 md:my-0">
+                        <a
+                            href="#contact-us"
+                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
+                        >
+                            Contact us
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </header>
     );

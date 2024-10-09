@@ -18,7 +18,7 @@ const FooterContainer: React.FC = () => {
     ];
 
     return (
-        <footer className="bg-gray-800 text-gray-100 py-4 bottom-0 w-full">
+        <footer className="bg-gray-800 text-gray-100 py-4 bottom-0 w-full" id="contact-us">
             <div className="container mx-auto text-center">
                 <p className="mb-2">© 2024 Your Company Name. All rights reserved.</p>
                 <SocialMediaLinks links={socialLinks} />

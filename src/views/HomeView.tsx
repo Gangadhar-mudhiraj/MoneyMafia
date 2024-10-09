@@ -3,9 +3,7 @@ import React from 'react';
 const HomeView: React.FC = () => {
     return (
         <>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center py-4 sm:py-6 text-white underline drop-shadow-lg">
-                Welcome
-            </h1>
+
             <div className="w-full sm:w-11/12 lg:w-10/12 mx-auto flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6 px-4 py-8 sm:py-12 backdrop-blur-sm rounded-lg shadow-lg">
                 <div className="details w-full md:w-1/2 text-center md:text-left px-4 sm:px-6 lg:px-12">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 pb-4 sm:pb-6 text-fuchsia-100 drop-shadow-lg">
