@@ -42,7 +42,7 @@ const NavView: React.FC = () => {
 
                 <ul
                     className={`flex-col md:flex-row md:flex md:space-x-4 absolute md:static bg-gray-800 md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'flex' : 'hidden'} md:flex`}
-                    style={{ top: '60px' }} // Adjust this value as needed
+                    style={{ top: '60px' }} 
                 >
                     <NavItem href="#home" label="Home" />
                     <NavItem href="#Bookcontent" label="Book Content" />
