@@ -1,6 +1,6 @@
-// FAQview.tsx
+
 import React, { useState } from 'react';
-import FAQItem from './FAQItem'; // Import the new FAQItem component
+import FAQItem from './FAQItem';
 
 const FAQview: React.FC = () => {
     interface FAQ {
@@ -31,11 +31,11 @@ const FAQview: React.FC = () => {
         }
     ];
 
-    const [faqs, setFaqs] = useState<FAQ[]>(initialFAQs); // State for FAQs
-    const [query, setQuery] = useState<string>(''); // For handling the query input
-    const [showInput, setShowInput] = useState<boolean>(false); // For toggling input visibility
+    const [faqs, setFaqs] = useState<FAQ[]>(initialFAQs);
+    const [query, setQuery] = useState<string>('');
+    const [showInput, setShowInput] = useState<boolean>(false);
 
-    const currentUser = "You"; // Assuming the current user is "You"
+    const currentUser = "You";
 
     const handleQuerySubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -43,7 +43,7 @@ const FAQview: React.FC = () => {
             return;
         }
 
-        // Create a new FAQ entry
+
         const newFAQ: FAQ = {
             question: query,
             askedBy: currentUser,
@@ -51,24 +51,24 @@ const FAQview: React.FC = () => {
             answeredBy: "Support Team"
         };
 
-        // Update the FAQ list
+
         setFaqs([...faqs, newFAQ]);
-        setQuery(''); // Clear input after submitting
+        setQuery('');
     };
 
     const toggleInputBox = () => {
-        setShowInput(!showInput); // Toggle the input box visibility
+        setShowInput(!showInput);
     };
 
     const handleDelete = (question: string) => {
-        setFaqs(faqs.filter(faq => faq.question !== question)); // Remove the FAQ based on question
+        setFaqs(faqs.filter(faq => faq.question !== question));
     };
 
-    // Sort FAQs to prioritize the current user's questions at the top
+
     const sortedFAQs = [...faqs].sort((a, b) => {
-        if (a.askedBy === currentUser && b.askedBy !== currentUser) return -1; // a goes first
-        if (a.askedBy !== currentUser && b.askedBy === currentUser) return 1;  // b goes first
-        return 0; // maintain original order if both are from the same user
+        if (a.askedBy === currentUser && b.askedBy !== currentUser) return -1;
+        if (a.askedBy !== currentUser && b.askedBy === currentUser) return 1;
+        return 0;
     });
 
     return (

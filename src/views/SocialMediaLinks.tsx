@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Importing social media icons
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 type SocialMediaLink = {
     name: string;

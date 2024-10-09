@@ -41,7 +41,7 @@ const FeedbackView: React.FC = () => {
 
         console.log(feedback);
 
-        // Reset form after submission
+
         setRating(0);
         setExperience('');
         setIdeas('');

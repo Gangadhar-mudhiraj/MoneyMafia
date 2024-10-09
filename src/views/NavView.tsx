@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
 import { FaBook, FaBars, FaTimes } from 'react-icons/fa';
 
+interface NavItemProps {
+    href: string;
+    label: string;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ href, label }) => {
+    return (
+        <li className="my-2 md:my-0">
+            <a
+                href={href}
+                className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-tl-lg rounded-r-lg font-bold transition-all duration-300"
+            >
+                {label}
+            </a>
+        </li>
+    );
+};
+
 const NavView: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen); // Toggle menu visibility
+        setIsOpen(!isOpen);
     };
 
     return (
@@ -18,7 +36,6 @@ const NavView: React.FC = () => {
                     <span className="ml-2 text-lg font-extrabold text-white">Money Mania</span>
                 </div>
 
-                {/* Hamburger icon for mobile only */}
                 <div className="block md:hidden" onClick={toggleMenu}>
                     {isOpen ? <FaTimes className="text-white text-2xl" /> : <FaBars className="text-white text-2xl" />}
                 </div>
@@ -26,48 +43,13 @@ const NavView: React.FC = () => {
                 <ul
                     className={`flex-col md:flex-row md:flex md:space-x-4 absolute md:static bg-gray-800 md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'flex' : 'hidden'
                         } md:flex`}
-                    style={{ top: '60px' }} // Adjust this value as needed
+                    style={{ top: '60px' }}
                 >
-                    <li className="my-2 md:my-0">
-                        <a
-                            href="#home"
-                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li className="my-2 md:my-0">
-                        <a
-                            href="#Bookcontent"
-                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
-                        >
-                            Book Content
-                        </a>
-                    </li>
-                    <li className="my-2 md:my-0">
-                        <a
-                            href="#Author"
-                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
-                        >
-                            Author
-                        </a>
-                    </li>
-                    <li className="my-2 md:my-0">
-                        <a
-                            href="#Feedback"
-                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
-                        >
-                            Feedback & FAQ
-                        </a>
-                    </li>
-                    <li className="my-2 md:my-0">
-                        <a
-                            href="#contact-us"
-                            className="text-center text-white text-lg hover:bg-orange-600 hover:text-white px-4 py-2 rounded-lg font-bold transition-all duration-300"
-                        >
-                            Contact us
-                        </a>
-                    </li>
+                    <NavItem href="#home" label="Home" />
+                    <NavItem href="#Bookcontent" label="Book Content" />
+                    <NavItem href="#Author" label="Author" />
+                    <NavItem href="#Feedback" label="Feedback & FAQ" />
+                    <NavItem href="#contact-us" label="Contact us" />
                 </ul>
             </nav>
         </header>
